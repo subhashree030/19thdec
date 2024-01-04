@@ -1,0 +1,41 @@
+{
+ "xsappname": "19thdec",
+ "tenant-mode": "dedicated",
+ "scopes": [
+  {
+   "name": "$XSAPPNAME.BookViewer",
+   "description": "BookViewer"
+  },
+  {
+   "name": "$XSAPPNAME.BookManager",
+   "description": "BookManager"
+  },
+  {
+   "name": "$XSAPPNAME.RiskViewer",
+   "description": "RiskViewer"
+  },
+  {
+   "name": "$XSAPPNAME.RiskManager",
+   "description": "RiskManager"
+  }
+ ],
+ "attributes": [],
+ "role-templates": [
+  {
+   "name": "BookViewer",
+   "description": "generated",
+   "scope-references": [
+    "$XSAPPNAME.BookViewer"
+   ],
+   "attribute-references": []
+  },
+  {
+   "name": "BookManager",
+   "description": "generated",
+   "scope-references": [
+    "$XSAPPNAME.BookManager"
+   ],
+   "attribute-references": []
+  }
+ ]
+}
