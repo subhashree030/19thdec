@@ -4,6 +4,9 @@ version: 1.0.0
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
+  cf-username: dashsubhashree329@gmail.com
+  cf-password: Shree@1234
+  cf-api: https://api.cf.us10-001.hana.ondemand.com
 build-parameters:
   before-all:
     - builder: custom
