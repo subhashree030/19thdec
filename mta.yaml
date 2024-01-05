@@ -4,9 +4,6 @@ version: 1.0.0
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
-  cf-username: dashsubhashree329@gmail.com
-  cf-password: Shree@1234
-  cf-api: https://api.cf.us10-001.hana.ondemand.com
 build-parameters:
   before-all:
     - builder: custom
@@ -70,14 +67,14 @@ resources:
         xsappname: 19thdec-${org}-${space}
         tenant-mode: dedicatedgit
         role-collections:
-        - name: 'RiskManager-${org}-${space}'
-          description: Manage Risks
-          role-template-references:
-          - $XSAPPNAME.RiskManager
-        - name: 'RiskViewer-${org}-${space}'
-          description: View Risks
-          role-template-references:
-          - $XSAPPNAME.RiskViewer
+          - name: 'RiskManager-${org}-${space}'
+            description: Manage Risks
+            role-template-references:
+              - $XSAPPNAME.RiskManager
+          - name: 'RiskViewer-${org}-${space}'
+            description: View Risks
+            role-template-references:
+              - $XSAPPNAME.RiskViewer
         oauth2-configuration:
           redirect-uris:
             - https://**.hana.ondemand.com/login/callback # Wildcard redirect to SAP BTP (You might want to make this more exclusive)
